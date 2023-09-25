@@ -69,7 +69,7 @@ namespace SPW.UserInterface
             {
                 TrxId = trxId,
                 Info = trx.Name,
-                Price = trx.Price,
+                Price = trx.Price * trx.Qty,
                 TypeId = type.TypeId
             };
             context.DetailEtcTrxes.Add(detail);

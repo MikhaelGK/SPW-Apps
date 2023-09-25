@@ -87,6 +87,7 @@ namespace SPW.InputForm
             var role = context.Roles.Where(x => x.Name == cBoxRole.Text).FirstOrDefault();
             var user = new Employee()
             {
+                EmployeeId = SnippetGenerator.GeneratorID(5, 0),
                 Name = tBoxName.Text,
                 Username = tBoxUsername.Text,
                 Email = tBoxEmail.Text,
@@ -94,7 +95,16 @@ namespace SPW.InputForm
                 RoleId = role.RoleId
             };
             context.Employees.Add(user);
-            context.SaveChanges();
+
+            try
+            {
+                context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                SnippetMbox.MboxError(ex.Message, "Employee");
+                throw;
+            } 
 
             this.DialogResult = DialogResult.OK;
             this.Close();
