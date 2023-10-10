@@ -245,7 +245,8 @@ namespace SPW.UserInterface
 
         private void dtpEnd_ValueChanged(object sender, EventArgs e)
         {
-
+            end = Convert.ToDateTime(dtpEnd.Value.ToString("yyyy-MM-dd"));
+            DataLoaded();
         }
 
         private void cBoxProduct_SelectedIndexChanged(object sender, EventArgs e)
