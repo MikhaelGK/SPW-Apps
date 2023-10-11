@@ -106,7 +106,7 @@
             this.cBoxType.Items.AddRange(new object[] {
             "Product ",
             "Etc"});
-            this.cBoxType.Location = new System.Drawing.Point(96, 1);
+            this.cBoxType.Location = new System.Drawing.Point(96, 3);
             this.cBoxType.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.cBoxType.Name = "cBoxType";
             this.cBoxType.Size = new System.Drawing.Size(163, 25);

@@ -56,6 +56,7 @@ namespace SPW.UserInterface
                 list.Add(item);
             }
 
+            list = list.OrderBy(x => x.Date).ToList();
             var profit = 0;
             var totalPrice = 0;
 

@@ -57,6 +57,7 @@ namespace SPW.UserInterface
                 headers.Add(header);
             }
 
+            headers = headers.OrderBy(x => x.Date).ToList();
             var total = 0;
             foreach (var i in headers)
             {
